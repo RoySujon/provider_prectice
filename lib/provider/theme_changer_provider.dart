@@ -7,5 +7,6 @@ class ThemeChanger extends ChangeNotifier {
   setTheme(themMode) {
     _themeMode = themMode;
     notifyListeners();
+    // dkdndm
   }
 }
