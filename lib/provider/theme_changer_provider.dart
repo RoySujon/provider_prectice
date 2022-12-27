@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ThemeChanger extends ChangeNotifier {
@@ -7,6 +7,5 @@ class ThemeChanger extends ChangeNotifier {
   setTheme(themMode) {
     _themeMode = themMode;
     notifyListeners();
-    // dkdndm
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_prectice/provider/fav_provider.dart';
 import 'package:provider_prectice/provider/theme_changer_provider.dart';
+import 'package:provider_prectice/screen/darktheme.dart';
 // import 'package:provider_prectice/screen/fav_screen.dart';
 // import 'package:provider_prectice/screen/homepage.dart';
 import 'package:provider_prectice/screen/providerclass.dart';
@@ -37,34 +38,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.green,
         ),
 
-        home: Scaffold(
-          // backgroundColor: Colors.red,
-          appBar: AppBar(
-            centerTitle: true,
-            title: Text('ROY'),
-          ),
-          body: Column(
-            children: [
-              RadioListTile<ThemeMode>(
-                  title: Text('Light Mode'),
-                  value: ThemeMode.light,
-                  groupValue: themeProvider.themeMode,
-                  onChanged: themeProvider.setTheme),
-              RadioListTile<ThemeMode>(
-                  title: Text('Dark Mode'),
-                  value: ThemeMode.dark,
-                  groupValue: themeProvider.themeMode,
-                  onChanged: themeProvider.setTheme),
-              RadioListTile<ThemeMode>(
-                  title: Text('System Mode'),
-                  value: ThemeMode.system,
-                  groupValue: themeProvider.themeMode,
-                  onChanged: themeProvider.setTheme),
-              Text('GOUTOM ROY'),
-              Icon(Icons.favorite)
-            ],
-          ),
-        ),
+        home: DarkTheme(),
       ),
     );
   }
