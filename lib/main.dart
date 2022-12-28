@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_prectice/provider/fav_provider.dart';
 import 'package:provider_prectice/provider/theme_changer_provider.dart';
-import 'package:provider_prectice/screen/darktheme.dart';
+// import 'package:provider_prectice/screen/darktheme.dart';
 // import 'package:provider_prectice/screen/fav_screen.dart';
 // import 'package:provider_prectice/screen/homepage.dart';
 import 'package:provider_prectice/screen/providerclass.dart';
+import 'package:provider_prectice/screen/value_notify_listner.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final themeProvider = Provider.of<ThemeChanger>(context);
-    print('build');
+    // print('build');
     return Consumer<ThemeChanger>(
       builder: (context, themeProvider, child) => MaterialApp(
         themeMode: themeProvider.themeMode,
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.green,
         ),
 
-        home: DarkTheme(),
+        home: NotifyListenerScreen(),
       ),
     );
   }
